@@ -4,7 +4,7 @@ module.exports = {
     toField: '#to',
     phoneNumberField: '#phone',
     codeField: '#code',
-    cardNumberField: '#card number',
+    //cardNumberField: '#card number',
     commentBox: '#comment',
 
     // Buttons
@@ -13,7 +13,7 @@ module.exports = {
     nextButton: 'button=Next',
     confirmButton: 'button=Confirm',
     paymentMethodField: '.pp-text',
-    addCardButton: 'pp-selector',
+    addCardBox: 'pp-selector',
     paymentMethodAddedCard: 'div=Card',
     supportiveCar: 'div=Supportive',
     blanketToggle: '.switch',
@@ -77,7 +77,7 @@ module.exports = {
         await $(this.confirmButton).click()
     },
 
-    submitPaymentMethod: async function(paymentMethod) {
+    submitPaymentMethod: async function() {
         const paymentMethodField = await $(this.paymentMethodField);
         await paymentMethodField.click();
         const creditCardModal = await $(this.creditCardModal);
